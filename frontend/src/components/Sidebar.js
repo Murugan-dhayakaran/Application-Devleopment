@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../pages/css/Sidebar.css';
-import F21 from '../pages/css/F21.jpeg'; // Make sure the image is in the specified path
+import F21 from '../pages/css/F21.jpeg';
 
 const Sidebar = () => {
   return (
