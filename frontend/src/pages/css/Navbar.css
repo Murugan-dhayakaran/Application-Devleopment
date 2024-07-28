@@ -1,27 +1,52 @@
+/* src/pages/css/Navbar.css */
 .navbar {
-  background-color: #333;
-  padding: 1rem;
+  position: sticky;
+  top: 0;
+  background-color: #c2a245;
+  padding: 0.5rem;
   color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+ 
 }
 
-.navbar ul {
+.navbar-links ul {
   list-style: none;
   display: flex;
-  justify-content: space-around;
   margin: 0;
   padding: 0;
 }
 
-.navbar li {
-  display: inline;
+.navbar-links li {
+  margin-right: 1rem;
 }
 
-.navbar a {
+.navbar-links a {
   color: #fff;
   text-decoration: none;
   font-size: 1rem;
 }
 
-.navbar a:hover {
+.navbar-links a:hover {
   text-decoration: underline;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-name {
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.navbar-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }

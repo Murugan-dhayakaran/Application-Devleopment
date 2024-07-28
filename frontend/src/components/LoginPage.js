@@ -13,11 +13,13 @@ const LoginPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (username && password) {
-      const user = { username, password };
-      dispatch(setUser(user));
-      navigate('/landing');
+    if (!username || !password) {
+      alert('Please fill out all fields');
+      return;
     }
+    const user = { username, password };
+    dispatch(setUser(user));
+    navigate('/landing');
   };
 
   return (
@@ -33,6 +35,7 @@ const LoginPage = () => {
               id="username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
+              placeholder="Enter your username"
             />
           </div>
           <div>
@@ -42,12 +45,16 @@ const LoginPage = () => {
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              placeholder="Enter your password"
             />
           </div>
           <button type="submit">Login</button>
         </form>
         <p>
           Don't have an account? <Link to="/register">Register here</Link>
+        </p>
+        <p>
+          <Link to="/adminside">Admin</Link>
         </p>
       </div>
     </div>
