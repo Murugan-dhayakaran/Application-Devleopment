@@ -27,7 +27,7 @@ const Sidebar = () => {
           <Link to="" className="sidebar-link">Settings</Link>
         </li>
         <li>
-          <Link to="/logout" className="sidebar-link">Logout</Link>
+          <Link to="/login" className="sidebar-link">Logout</Link>
         </li>
       </ul>
     </div>

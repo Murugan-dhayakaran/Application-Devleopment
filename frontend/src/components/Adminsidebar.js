@@ -21,7 +21,7 @@ const Sidebar = () => {
           <Link to="" className="sidebar-link">Swapping</Link>
         </li>
         <li>
-          <Link to="Logout" className="sidebar-link">Logout</Link>
+          <Link to="/login" className="sidebar-link">Logout</Link>
         </li>
       </ul>
     </div>

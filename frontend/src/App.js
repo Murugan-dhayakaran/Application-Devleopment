@@ -9,6 +9,7 @@ import LandingPage from './components/LandingPage';
 import AdminDashboard from './components/AdminDashboard';
 import Dashboard from './components/Dashboard';
 import Sidebar from './components/Sidebar';
+import AdminLoginPage from './components/AdminLoginPage';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/dash" element={<Dashboard />} />
           <Route path="/side" element={<Sidebar />} />
           <Route path="/adminside" element={<AdminDashboard />} />
+          <Route path="/adminlogin" element={<AdminLoginPage />} />
         </Routes>
       </Router>
     </Provider>

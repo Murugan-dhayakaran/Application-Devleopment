@@ -54,7 +54,7 @@ const LoginPage = () => {
           Don't have an account? <Link to="/register">Register here</Link>
         </p>
         <p>
-          <Link to="/adminside">Admin</Link>
+          <Link to="/adminside">Login as Admin</Link>
         </p>
       </div>
     </div>
