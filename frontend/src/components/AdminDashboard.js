@@ -1,4 +1,4 @@
-// src/pages/Dashboard.js
+
 import React from 'react';
 // import Navbar from './Navbar';
 import Adminsidebar from './Adminsidebar';
@@ -28,7 +28,6 @@ const Dashboard = () => {
           </div>
           <div className="dashboard-chart">
             <h2>Sales Overview</h2>
-            {/* <img src={chartImage} alt="Sales Chart" /> */}
           </div>
         </div>
       </div>

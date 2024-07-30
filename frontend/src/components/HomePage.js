@@ -7,12 +7,9 @@ import p1 from '../pages/css/p2.webp';
 import p5 from '../pages/css/p5.jpg';
 import p6 from '../pages/css/p6.webp';
 import p7 from '../pages/css/p7.png';
-import p8 from '../pages/css/p8.jpeg';
-// import Sidebar from './Dashboard';
 const HomePage = () => {
   return (
     <div>
-      {/* <Sidebar></Sidebar> */}
       <Navbar />
       <div className="home-container">
         <img
