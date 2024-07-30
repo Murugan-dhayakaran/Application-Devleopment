@@ -1,13 +1,15 @@
 /* Home Page Styles */
 .home-container {
-  padding: 2rem;
+  padding: 8rem;
   text-align: center;
+  width: 90%;
+
 }
 
 .main-banner {
-  width: 80%;
+  width: 120%;
   margin: 0 auto 2rem;
-  display: block;
+  /* display: block; */
 }
 
 .cards-heading {

@@ -66,7 +66,7 @@ const HomePage = () => {
               </div>
             </div>
             <div className="card">
-              <img src={p8} alt="Card 6" />
+              <img src={p7} alt="Card 6" />
               <div className="card-content">
                 <h3>Accessories and dress</h3>
                 <p>Versatile accessories enhance any dress, adding style and flair effortlessly.</p>

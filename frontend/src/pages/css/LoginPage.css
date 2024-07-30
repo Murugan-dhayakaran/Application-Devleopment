@@ -1,18 +1,44 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e00303;
+}
 
-.container {
+.login-content {
+  display: flex;
   background-color: #fff;
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
   width: 100%;
-  max-width: 400px;
-  margin: 2rem auto;
+}
+
+.form-container {
+  flex: 1;
+  padding-right: 1rem;
   text-align: center;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
   margin-bottom: 1.5rem;
   color: #333;
+  font-size: 2rem;
 }
 
 form {
@@ -20,21 +46,33 @@ form {
   flex-direction: column;
 }
 
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
 label {
   margin-bottom: 0.5rem;
   color: #555;
   text-align: left;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 input[type="text"],
 input[type="password"] {
   padding: 0.75rem;
-  margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
   width: 100%;
   box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #007bff;
+  outline: none;
 }
 
 button {
@@ -43,22 +81,144 @@ button {
   border-radius: 4px;
   background-color: #007bff;
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s;
 }
 
 button:hover {
   background-color: #0056b3;
+  transform: scale(1.02);
 }
 
 p {
   margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
 }
 
 a {
   color: #007bff;
   text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+/* Add this to the existing CSS */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('p01.jpg') no-repeat center center fixed; /* Add your background image here */
+  background-size: cover;
+  overflow: hidden; /* Ensure no scrollbars appear */
+}
+
+.login-content {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.9); /* Add a slight transparency */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  margin: 0 20px; /* Add some margin for smaller screens */
+}
+
+.form-container {
+  flex: 1;
+  padding-right: 1rem;
+  text-align: center;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-size: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  color: #555;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 a:hover {

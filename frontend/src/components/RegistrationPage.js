@@ -4,6 +4,7 @@ import { setUser } from '../redux/actions';
 import { Link, useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import '../pages/css/RegistrationPage.css';
+import p7 from '../pages/css/p7.png';
 
 const RegistrationPage = () => {
   const [username, setUsername] = useState('');
@@ -51,63 +52,63 @@ const RegistrationPage = () => {
     <div>
       <Navbar />
       <div className="container">
-        <h2>Register</h2>
-        <form onSubmit={handleSubmit} className="form">
-          <div className="form-group">
-            <label htmlFor="username">Username:</label>
-            <input
-              type="text"
-              id="username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              placeholder="Enter your username"
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="phoneNumber">Phone Number:</label>
-            <input
-              type="tel"
-              id="phoneNumber"
-              value={phoneNumber}
-              onChange={(e) => setPhoneNumber(e.target.value)}
-              placeholder="Enter your phone number"
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="password">Password:</label>
-            <input
-              type="password"
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Enter your password"
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="confirmPassword">Confirm Password:</label>
-            <input
-              type="password"
-              id="confirmPassword"
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-              placeholder="Confirm your password"
-            />
-          </div>
-          <button type="submit" className="btn">Register</button>
-        </form>
-        <p>
-          Already have an account? <Link to="/login">Login here</Link>
-        </p>
+        <div className="form-container">
+          <h2>Registration</h2>
+          <form onSubmit={handleSubmit} className="form">
+            <div className="form-group">
+              <input
+                type="text"
+                id="username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                placeholder="Username"
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="email"
+                id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Email"
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="tel"
+                id="phoneNumber"
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
+                placeholder="Phone Number"
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="password"
+                id="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Password"
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="password"
+                id="confirmPassword"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                placeholder="Confirm Password"
+              />
+            </div>
+            <button type="submit" className="btn">Register</button>
+          </form>
+          <p>
+            Already have an account? <Link to="/login">Login here</Link>
+          </p>
+        </div>
+        <div className="image-container">
+          <img src={p7} alt="Registration" />
+        </div>
       </div>
     </div>
   );

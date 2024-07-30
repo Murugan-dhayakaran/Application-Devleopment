@@ -3,7 +3,9 @@ import { useDispatch } from 'react-redux';
 import { setUser } from '../redux/actions';
 import { Link, useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
-import '../pages/css/LoginPage.css';
+// import '../pages/css/LoginPage.css';
+import p7 from '../pages/css/p7.png';
+import p01 from '../pages/css/p01.jpg';
 
 const LoginPage = () => {
   const [username, setUsername] = useState('');
@@ -25,37 +27,44 @@ const LoginPage = () => {
   return (
     <div>
       <Navbar />
-      <div className="container">
-        <h2>Login</h2>
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="username">Username:</label>
-            <input
-              type="text"
-              id="username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              placeholder="Enter your username"
-            />
+      <div className="login-container">
+        <div className="login-content">
+          <div className="form-container">
+            <h2>Login</h2>
+            <form onSubmit={handleSubmit}>
+              <div className="input-group">
+                <label htmlFor="username">Username:</label>
+                <input
+                  type="text"
+                  id="username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  placeholder="Enter your username"
+                />
+              </div>
+              <div className="input-group">
+                <label htmlFor="password">Password:</label>
+                <input
+                  type="password"
+                  id="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Enter your password"
+                />
+              </div>
+              <button type="submit">Login</button>
+            </form>
+            <p>
+              Don't have an account? <Link to="/register">Register here</Link>
+            </p>
+            <p>
+              <Link to="/adminside">Login as Admin</Link>
+            </p>
           </div>
-          <div>
-            <label htmlFor="password">Password:</label>
-            <input
-              type="password"
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Enter your password"
-            />
+          <div className="image-container">
+            <img src={p7} alt="Login" />
           </div>
-          <button type="submit">Login</button>
-        </form>
-        <p>
-          Don't have an account? <Link to="/register">Register here</Link>
-        </p>
-        <p>
-          <Link to="/adminside">Login as Admin</Link>
-        </p>
+        </div>
       </div>
     </div>
   );
