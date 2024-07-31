@@ -17,9 +17,6 @@ const Navbar = () => {
           <li>
             <Link to="/register">Register</Link>
           </li>
-          <li>
-            <Link to="/dash">Dashboard</Link>
-          </li>
         </ul>
       </div>
       <div className="navbar-right">

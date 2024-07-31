@@ -18,7 +18,7 @@ const Sidebar = () => {
           <Link to="" className="sidebar-link">Users</Link>
         </li>
         <li>
-          <Link to="" className="sidebar-link">Orders</Link>
+          <Link to="/order" className="sidebar-link">Orders</Link>
         </li>
         <li>
           <Link to="" className="sidebar-link">Products</Link>

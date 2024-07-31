@@ -1,0 +1,16 @@
+/* src/pages/css/HomePage.css */
+.layout-container {
+    display: flex;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 2rem;
+    background: url('p01.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  .main-content.with-sidebar {
+    margin-left: 250px; /* Offset the content for sidebar */
+  }
+  

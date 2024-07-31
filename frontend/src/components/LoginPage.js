@@ -4,24 +4,46 @@ import { setUser } from '../redux/actions';
 import { Link, useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 // import '../pages/css/LoginPage.css';
-import p7 from '../pages/css/p7.png';
-import p01 from '../pages/css/p01.jpg';
+import p001 from '../pages/css/p001.jpg';
+
 
 const LoginPage = () => {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [errors, setErrors] = useState({});
+  const [userType, setUserType] = useState('');
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const validateForm = () => {
+    const errors = {};
+    if (!email) {
+      errors.email = 'Email is required';
+    }
+    if (!password) {
+      errors.password = 'Password is required';
+    }
+    return errors;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!username || !password) {
-      alert('Please fill out all fields');
-      return;
+    const formErrors = validateForm();
+    if (Object.keys(formErrors).length === 0) {
+      console.log('Email:', email, 'Password:', password);
+      if (email === 'admin@example.com') {
+        setUserType('admin');
+        navigate('/adminside');
+      } 
+       else {
+        setUserType('user');
+        navigate('/side');
+      }
+      const user = { email, password, userType };
+      dispatch(setUser(user));
+    } else {
+      setErrors(formErrors);
     }
-    const user = { username, password };
-    dispatch(setUser(user));
-    navigate('/landing');
   };
 
   return (
@@ -33,14 +55,15 @@ const LoginPage = () => {
             <h2>Login</h2>
             <form onSubmit={handleSubmit}>
               <div className="input-group">
-                <label htmlFor="username">Username:</label>
+                <label htmlFor="email">Email:</label>
                 <input
                   type="text"
-                  id="username"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                  placeholder="Enter your username"
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
                 />
+                {errors.email && <p className="error">{errors.email}</p>}
               </div>
               <div className="input-group">
                 <label htmlFor="password">Password:</label>
@@ -51,18 +74,17 @@ const LoginPage = () => {
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter your password"
                 />
+                {errors.password && <p className="error">{errors.password}</p>}
               </div>
               <button type="submit">Login</button>
             </form>
             <p>
               Don't have an account? <Link to="/register">Register here</Link>
             </p>
-            <p>
-              <Link to="/adminside">Login as Admin</Link>
-            </p>
+
           </div>
           <div className="image-container">
-            <img src={p7} alt="Login" />
+            <img src={p001} alt="Login" />
           </div>
         </div>
       </div>

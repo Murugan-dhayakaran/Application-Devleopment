@@ -4,7 +4,7 @@ import { setUser } from '../redux/actions';
 import { Link, useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import '../pages/css/RegistrationPage.css';
-import p7 from '../pages/css/p7.png';
+import p001 from '../pages/css/p001.jpg';
 
 const RegistrationPage = () => {
   const [username, setUsername] = useState('');
@@ -106,8 +106,8 @@ const RegistrationPage = () => {
             Already have an account? <Link to="/login">Login here</Link>
           </p>
         </div>
-        <div className="image-container">
-          <img src={p7} alt="Registration" />
+        <div className="registration-image-container">
+          <img src={p001} alt="Registration" />
         </div>
       </div>
     </div>

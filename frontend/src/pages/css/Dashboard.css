@@ -28,11 +28,12 @@
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 2rem;
-  color: #333;
+  color: #f8f3f3;
 }
 
 .dashboard-overview {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 2rem;
 }
@@ -44,6 +45,7 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   width: 20%;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .dashboard-card h3 {
@@ -63,11 +65,55 @@
 
 .dashboard-chart h2 {
   margin-bottom: 1rem;
-  color: #333;
+  color: #f6f4f4;
 }
 
 .dashboard-chart img {
   width: 100%;
   height: auto;
   border-radius: 8px;
+}
+
+.dashboard-recent-activity {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.dashboard-recent-activity h2 {
+  margin-bottom: 1rem;
+  color: #f6f4f4;
+}
+
+.dashboard-recent-activity ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dashboard-recent-activity li {
+  margin-bottom: 0.5rem;
+  color: #f5f2f2;
+}
+
+.dashboard-reports {
+  margin-top: 2rem;
+}
+
+.dashboard-reports h2 {
+  margin-bottom: 1rem;
+  color: #f6f4f4;
+}
+
+.report-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.report-link {
+  color: #f7f8fa;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.report-link:hover {
+  text-decoration: underline;
 }

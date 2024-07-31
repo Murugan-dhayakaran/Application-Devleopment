@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../pages/css/Sidebar.css';
 import F21 from '../pages/css/F21.jpeg';
 
-const Sidebar = () => {
+const AdminSidebar = () => {
   return (
     <div className="sidebar">
       <div className="profile-container">
@@ -15,7 +15,7 @@ const Sidebar = () => {
           <Link to="/" className="sidebar-link">Home</Link>
         </li>
         <li>
-          <Link to="" className="sidebar-link">Rental</Link>
+          <Link to="/rental" className="sidebar-link">Rental</Link>
         </li>
         <li>
           <Link to="" className="sidebar-link">Swapping</Link>
@@ -28,4 +28,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default AdminSidebar;
