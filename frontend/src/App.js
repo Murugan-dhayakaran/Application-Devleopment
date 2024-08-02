@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './redux/store';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from './components/HomePage';
 import LoginPage from './components/LoginPage';
 import RegistrationPage from './components/RegistrationPage';
@@ -11,6 +12,7 @@ import Dashboard from './components/Dashboard';
 import Sidebar from './components/Sidebar';
 import AdminLoginPage from './components/AdminLoginPage';
 import OrderPage from './components/OrderPage';
+import Products from './components/Products';
 
 
 const App = () => {
@@ -27,6 +29,7 @@ const App = () => {
           <Route path="/adminside" element={<AdminDashboard />} />
           <Route path="/adminlogin" element={<AdminLoginPage />} />
           <Route path="/order" element={<OrderPage />} />
+          <Route path="/product" element={<Products />} />
           
         </Routes>
       </Router>

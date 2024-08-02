@@ -115,3 +115,17 @@
   height: 40px;
   border-radius: 50%;
 }
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem; /* Added padding for better hover effect */
+  border-radius: 5px; /* Added border-radius for smooth corners */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.navbar-links a:hover {
+  background-color: #575757; /* Background color change on hover */
+  color: #ffcc00; /* Text color change on hover */
+  text-decoration: none; /* Ensures underline is not shown */
+}
