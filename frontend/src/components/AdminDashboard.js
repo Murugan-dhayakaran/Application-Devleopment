@@ -33,11 +33,7 @@ const Dashboard = () => {
               <p>45</p>
             </div>
           </div>
-          {/* <div className="dashboard-chart">
-            <h2>Sales Overview</h2>
-            Add chart here
-            <img src="p10" alt="Sales Chart" />
-          </div> */}
+          
           <div className="dashboard-recent-activity">
             <h2>Recent Activity</h2>
             <ul>
