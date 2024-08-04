@@ -35,5 +35,9 @@ public class User {
     private String password;
     private String mobile;
     private int age;
+    public String getRoles() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getRoles'");
+    }
 
 }
