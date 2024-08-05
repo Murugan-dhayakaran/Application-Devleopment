@@ -1,5 +1,5 @@
-// package com.project.fashionrental.config;
+package com.project.fashionrental.config;
 
-// public class CorsConfig {
+public class CorsConfig {
     
-// }
+}
