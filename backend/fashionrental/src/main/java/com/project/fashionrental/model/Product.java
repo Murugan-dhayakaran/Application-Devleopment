@@ -1,10 +1,13 @@
 package com.project.fashionrental.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Entity;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,6 +27,10 @@ public class Product {
     private Long productId;
     private String productName;
     private String size;
-    private String Description;
+    private String description;  // Corrected field name
     private int price;
+
+    @OneToOne(mappedBy = "product" , cascade = CascadeType.ALL)
+    @JsonIgnore
+    private Order order;
 }

@@ -1,7 +1,6 @@
 package com.project.fashionrental.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
+import java.util.Date;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,7 +8,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,26 +20,15 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name = "user_profile")
-public class UserProfile {
-
+@Table(name = "payment_data")
+public class Payment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String name;
-    private String email;
-    private String password;
-    private String mobile;
-    private int age;
-    
-    // Additional fields
-    private String image;
-    private String gender;
-    private String location;
-    private String contactInfo;
+    private Long paymentId;
+    private Date paymentDate;
+    private Long amount;
 
     @OneToOne
-    @JsonIgnore
-    @JoinColumn(name = "user_id")
-    private User user;
+    @JoinColumn(name = "order_id", referencedColumnName = "orderId")
+    private Order order;
 }

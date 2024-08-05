@@ -58,8 +58,8 @@ public class SecurityConfig {
                                                 .requestMatchers(
                                                                 "/api/users/**",
                                                                 "/api/auth/**",
-                                                                "/api/course/**",
-                                                                "/api/enrollments/**")
+                                                                "/api/product/**",
+                                                                "/api/order/**")
                                                 .authenticated())
                                 .sessionManagement(session -> session
                                                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS))

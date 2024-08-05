@@ -1,13 +1,16 @@
 package com.project.fashionrental.model;
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 // import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-// import jakarta.persistence.JoinColumn;
-// import jakarta.persistence.ManyToOne;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 // import jakarta.persistence.Transient;
 import lombok.AllArgsConstructor;
@@ -30,4 +33,13 @@ public class Order {
     private Long orderId;
     private Date orderDate;
     private Date deliveryDate;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id",nullable =false)
+    private User user;
+
+    @OneToOne
+    @JsonIgnore
+    @JoinColumn(name = "product_id", referencedColumnName = "productId")
+    private Product product;
 }
